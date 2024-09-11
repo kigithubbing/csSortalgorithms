@@ -26,6 +26,9 @@ foreach (var input in inputs)
             {
                 var res = Algorithms.Bubble.Sort(ii);
                 Console.WriteLine($"The Result is for int array is: {res}");
+                var resSelection=Algorithms.Selection.Sort(ii);
+                Console.WriteLine($"The Result is for int array using Selection Sort is: {resSelection}");
+
                 break;
             }
         case float[] f:
