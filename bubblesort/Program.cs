@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Security.Cryptography.X509Certificates;
+
 Console.WriteLine("Hello, World!");
 
 // var bubble = new Algorithms.Bubble();
@@ -28,6 +30,16 @@ foreach (var input in inputs)
                 Console.WriteLine($"The Result is for int array is: {res}");
                 var resSelection=Algorithms.Selection.Sort(ii);
                 Console.WriteLine($"The Result is for int array using Selection Sort is: {resSelection}");
+                var resInsertion = Algorithms.Insertion.Sort(ii);
+                var resString = string.Empty;
+                foreach (var s in resInsertion) 
+                    resString+= $"{s} ";
+                Console.WriteLine($"The Result is for int array using Insertion is: {resString}");
+                var resMergeSort = Algorithms.MergeSort.Sort(new int[] {43,57,9,19});
+                resString = string.Empty;
+                foreach (var s in resInsertion) 
+                    resString+= $"{s} ";
+                Console.WriteLine($"The Result is for int array using MergeSort is: {resString}");
 
                 break;
             }
